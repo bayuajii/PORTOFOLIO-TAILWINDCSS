@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .sosmed{
+        @apply p-2 border rounded-full border-slate-300 hover:border-primary text-slate-300 hover:text-primary transition duration-500 mr-1;
+    }
+    .hamberger{
+        @apply w-[30px] h-[2px] my-2 block bg-slate-800 transition duration-300;
+    }
+    .container{
+        @apply p-8 mx-auto;
+    }
+    .logo{
+        @apply max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8;
+    }
+    .blog-button{
+        @apply border py-1 px-4 font-medium text-white text-sm rounded-lg bg-primary hover:bg-teal-700 transition duration-500;
+    }
+}
+
+.hamberger-active > span:nth-child(1){
+    @apply rotate-45;
+}
+
+.hamberger-active > span:nth-child(2){
+    @apply scale-0;
+}
+
+.hamberger-active > span:nth-child(3){
+    @apply -rotate-45;
+}
+
+.navbar-fixed{
+    @apply fixed z-[9999] bg-slate-100 bg-opacity-80 border-b border-slate-200;
+    backdrop-filter: blur(5px);
+    
+}
